@@ -33,7 +33,7 @@ public class Main {
         }
     }
 
-    public static boolean sentenceTerminationCharacter(char[] charactersInSentence) {
+    public static boolean sentenceEndCharacter(char[] charactersInSentence) {
         /**
          * Setting up a char to hold the final character in the sentence and then checks it
          * against the valid termination characters and returns true if it does and false
@@ -95,7 +95,7 @@ public class Main {
             System.out.println("There are uneven number of quotation marks present.");
             valid = 0;
         }
-        if (!sentenceTerminationCharacter(charactersInSentence)) {
+        if (!sentenceEndCharacter(charactersInSentence)) {
             System.out.println("The sentence must end with \".\", \"?\", \"!\"");
             valid = 0;
         }
@@ -119,7 +119,7 @@ public class Main {
          * them to check all the sentences they would like
          */
         String sentence;
-        System.out.println("Welcome to the string Validator, Please enter a string below");
+        System.out.println("Welcome to the sentence validator, Please enter a sentence below");
         System.out.print(">> ");
         sentence = Input.nextLine();
         if (sentenceCheck(sentence) == 0) {
@@ -131,7 +131,7 @@ public class Main {
         System.out.print(">> ");
         String answer = Input.nextLine();
         while (answer.equals("y") || answer.equals("Y")){
-            System.out.println("Please enter a string below");
+            System.out.println("Please enter a sentence below");
             System.out.print(">> ");
             sentence = Input.nextLine();
             if (sentenceCheck(sentence) == 0) {
@@ -144,6 +144,7 @@ public class Main {
             answer = Input.nextLine();
 
         }
+        System.out.print("Thanks for using the sentence validator");
 
 
     }
